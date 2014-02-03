@@ -1,2 +1,3 @@
-jquery-bulk-checkboxes
+jQuery Bulk Checkboxes
 ======================
+jQuery Bulk Checkboxes Plugin
