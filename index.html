@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bulk Checkboxes Demo</title>
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="./bulk-checkboxes.js"></script>
+    <script>
+        jQuery(function($) {
+            var $bcb = $('.bulk-cb');
+            $bcb.bulkCheckboxes({selectAll: '.select-all'}); // init plugin
+
+            // get selected items
+            $('input[type=checkbox]:not(.select-all)').on('click', function() {
+                setTimeout(function() {
+                    var items = $bcb.bulkCheckboxes('getSelectedItems');
+                    console.log(items);
+                }, 500);
+            });
+        });
+    </script>
+</head>
+<body>
+    <table class="bulk-cb" border="1">
+        <thead>
+            <th><input type="checkbox" class="select-all" /></th>
+            <th>Title</th>
+            <th>Description</th>
+        </thead>
+        <tr>
+            <td><input type="checkbox" value="cb1" /></td>
+            <td>Title 1</td>
+            <td>Description 1</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="cb2" /></td>
+            <td>Title 2</td>
+            <td>Description 2</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="cb3" /></td>
+            <td>Title 3</td>
+            <td>Description 3</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="cb4" /></td>
+            <td>Title 4</td>
+            <td>Description 4</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="cb5" /></td>
+            <td>Title 5</td>
+            <td>Description 5</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="cb6" /></td>
+            <td>Title 6</td>
+            <td>Description 6</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="cb7" /></td>
+            <td>Title 7</td>
+            <td>Description 7</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" value="cb8" /></td>
+            <td>Title 8</td>
+            <td>Description 8</td>
+        </tr>
+        <tfoot>
+            <th><input type="checkbox" class="select-all" /></th>
+            <th>Title</th>
+            <th>Description</th>
+        </tfoot>
+    </table>
+</body>
+</html>
